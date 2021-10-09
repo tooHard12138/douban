@@ -1,0 +1,482 @@
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.hidden{
+    display: none;
+}
+
+body{
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 13px;
+    line-height: 1.618;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 30px 10px 0px 10px;
+    position: relative;
+}
+
+.container .dmdl .switch-qricon,
+.container .qrdl .switch-pcicon{
+    width: 30px;
+    height: 30px;
+    background: url("../img/下载.png") 0 0/100% 100% no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.container .dmdl .switch-qricon:hover,
+.container .qrdl .switch-pcicon:hover{
+    opacity: .8;
+}
+
+.container .dmdl .switch-qricon:hover::before,
+.container .qrdl .switch-pcicon:hover::before{
+    content: "\626B\7801\767B\5F55";
+    display: block;
+    color: #666;
+    font-size: 13px;
+    width: 65px;
+    height: 28px;
+    border: 1px solid rgba(66,189,86,.3);
+    background: #f5faf9;
+    box-sizing: border-box;
+    padding-left: 5px;
+    line-height: 28px;
+    position: absolute;
+    left: -85px;
+    border-radius: 3px;
+}
+
+.container .dmdl .switch-qricon:hover::after,
+.container .qrdl .switch-pcicon:hover::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #f5faf9;
+    border-top: 1px solid rgba(66,189,86,.3);
+    border-right: 1px solid rgba(66,189,86,.3);
+    transform: rotate(45deg);
+    top: 8px;
+    left: -26px;
+}
+
+.container .dmdl .login-switch{
+    height: 28px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ececec;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.container .dmdl .login-switch span{
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.container .dmdl .login-switch .switch-left,
+.container .dmdl .login-switch.mima .switch-right{
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #494949;
+    box-sizing: border-box;
+}
+
+.container .dmdl .login-switch .switch-right,
+.container .dmdl .login-switch.mima .switch-left{
+    color: #9b9b9b;
+    font-weight: normal;
+    border: none;
+}
+
+.container .dmdl .login-form a{
+    color: #41ac52;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.container .dmdl .login-form button{
+    background: #41ac52;
+    color: #fff;
+}
+
+.container .dmdl .login-form .form-item{
+    margin-bottom: 10px;
+}
+
+.container .dmdl .login-form .form-item .agreement{
+    float: left;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.container .dmdl .login-form .form-item .zhaohui{
+    float: right;
+    display: none;
+}
+
+.container .dmdl .login-form .form-item.mima .agreement,
+.container .dmdl .login-form .form-item.mima .phone,
+.container .dmdl .login-form .form-item.mima .verification,
+.container .dmdl .login-form .form-item.mima .a-dx{
+    display: none;
+}
+
+.container .dmdl .login-form .form-item.mima .zhaohui,
+.container .dmdl .login-form .form-item.mima  .account,
+.container .dmdl .login-form .form-item.mima  .password,
+.container .dmdl .login-form .form-item.mima .a-mm{
+    display: block;
+}
+
+.container .dmdl .login-form .form-item .phone,
+.container .dmdl .login-form .form-item .account,
+.container .dmdl .login-form .form-item .verification,
+.container .dmdl .login-form .form-item .password{
+    width: 100%;
+    height: 33px;
+    box-sizing: border-box;
+    border: 1px solid #e4e6e5;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 22px;
+    border-right: 1px solid rgba(0,0,0,.12);
+    position: absolute;
+    top: 6px;
+    right: 0px;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .area-code{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    overflow: hidden;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .7);
+    cursor: initial;
+    z-index: 1;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list{
+    width: 284px;
+    height: 224px;
+    position: absolute;
+    top: -16px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list .icon-chahao{
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    color: #b4b4b4;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list .icon-chahao:hover{
+    color: #fab0b6;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list .list-title{
+    height: 42px;
+    background: #ebf5eb;
+    font-size: 16.38px;
+    font-weight: bold;
+    color: #060;
+    line-height: 47px;
+    padding-left: 14px;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul{
+    height: 180px;
+    overflow: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li{
+    height: 37px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 37px;
+    cursor: pointer;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li:first-child{
+    border-top: 1px solid #e5e5e5;
+    height: 38px;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li .left{
+    font-size: 14px;
+    font-weight: 700;
+    color: #494949;
+    line-height: 2.6;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li .right{
+    font-size: 14px;
+    line-height: 2.6;
+    color: #aaa;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li.select .left,
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li.select .right{
+    color: #42bd56;
+}
+
+.container .dmdl .login-form .form-item .phone .global-roaming .drop-list-mongolia .drop-list ul li.select .left::after{
+    content: "\2714\FE0E";
+    margin-left: 14px;
+}
+
+.container .dmdl .login-form .form-item .phone input,
+.container .dmdl .login-form .form-item .account input,
+.container .dmdl .login-form .form-item .verification input,
+.container .dmdl .login-form .form-item .password input{
+    width: 100%;
+    height: 100%;
+    padding: 0 40px 0 60px;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.container .dmdl .login-form .form-item .phone input::placeholder{
+    font-size: 13px;
+}
+
+.container .dmdl .login-form .form-item .account input,
+.container .dmdl .login-form .form-item .password input{
+    padding: 0 10px;
+}
+
+.container .dmdl .login-form .form-item .account{
+    display: none;
+}
+
+.container .dmdl .login-form .form-item .verification input{
+    padding: 0px 83px 0px 10px;
+}
+
+.container .dmdl .login-form .form-item .verification .obtain{
+    position: absolute;
+    width: 83px;
+    height: 31px;
+    line-height: 33px;
+    text-align: center;
+    top: 0;
+    right: 0;
+}
+
+.container .dmdl .login-form .form-item .verification .obtain a{
+    font-size: 13px;
+}
+
+.container .dmdl .login-form .form-item .password{
+    display: none;
+}
+
+.container .dmdl .login-form .form-item .login-button{
+    width: 100%;
+    height: 34px;
+    font-size: 15px;
+    border-radius: 3px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container .dmdl .login-form .form-item .login-button:disabled{
+    cursor: initial;
+    background: rgba(66,189,86,.5);
+}
+
+.container .dmdl .login-form .form-item .auto-login{
+    float: left;
+    font-size: 13px;
+    color: #333;
+}
+
+.container .dmdl .login-form .form-item .auto-login input{
+    margin-right: .5px;
+}
+
+.container .dmdl .login-form .form-item .a-dx,
+.container .dmdl .login-form .form-item .a-mm{
+    float: right;
+    font-size: 13px;
+}
+
+.container .dmdl .login-form .form-item .a-mm{
+    display: none;
+}
+
+.container .dmdl .ttp{
+    width: 250px;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    padding-top: 11px;
+}
+
+.container .dmdl .ttp span{
+    color: #9b9b9b;
+    font-size: 11px;
+    vertical-align: 8px;
+}
+
+.container .dmdl .ttp a{
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.container .dmdl .ttp img{
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.container .dmdl .ttp a:last-child{
+    margin-left: 13px;
+}
+
+.container .qrdl .switch-pcicon{
+    background: url("../img/denglu_icon.png") no-repeat 0 0/100% 100%;
+}
+
+.container .qrdl .switch-pcicon:hover::before{
+    content: "\77ED\4FE1\767B\5F55/\6CE8\518C";
+    width: 98px;
+    height: 28px;
+    left: -118px;
+}
+
+.container .qrdl .qrdl-title{
+    height: 27px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ececec;
+}
+
+.container .qrdl .qrdl-title span{
+    font-size: 13px;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.container .qrdl .qrdl-main{
+    margin-top: 20px;
+    position: relative;
+}
+
+.container .qrdl .qrdl-main img{
+    width: 170px;
+    height: 170px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container .qrdl .qrdl-main .qrmain-error{
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: rgba(255,255,255,.9);
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    display: none;
+}
+
+.container .qrdl .qrdl-main .qrmain-error.error{
+    display: block;
+}
+
+.container .qrdl .qrdl-main .qrmain-error span{
+    font-size: 15px;
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container .qrdl .qrdl-main .qrmain-error button{
+    display: block;
+    background: #41ac52;
+    color: #fff;
+    border-radius: 3px;
+    width: 86px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    margin: 8px auto 0 auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.container .qrdl .qrdl-bottom{
+    text-align: center;
+    line-height: 25px;
+    background: rgba(0,0,0,.08);
+    width: 183px;
+    height: 25px;
+    border-radius: 12px;
+    margin: 10px auto 0 auto;
+    color: #494949;
+}
+

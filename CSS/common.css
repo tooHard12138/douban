@@ -1,0 +1,14 @@
+/* 多页面的通用样式 */
+
+/* 一般固定用下面3个声明处理文本溢出后，用3个点表示（单行文本内容）
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; */
+
+/* 解决高度坍塌，清除浮动 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
